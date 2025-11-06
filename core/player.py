@@ -7,6 +7,7 @@ class Player(Character):
         self.speed=randint(5,10)
         self.power=randint(5,10)
         self.armor_rating=randint(5,10)
+        self.type="layer"
         professioni=randint(0,1)
         if professioni:
             self.profession='fighter'
