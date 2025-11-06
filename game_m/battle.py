@@ -4,6 +4,7 @@ class Battle:
     def __init__(self,player, monster):
         self.player=player
         self.monster=monster
+
     def first_turn(self):
         value_player=Dice.roll_dice(6)+self.player.speed
         value_monster=Dice.roll_dice(6)+self.monster.speed
