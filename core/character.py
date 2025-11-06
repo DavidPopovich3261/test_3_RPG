@@ -15,10 +15,9 @@ class Character:
         return False
 
     def injury(self,injury):
-        if self.type=="plyer":
-            damage=self.power
-        else:
-            damage=(self.power*self.weapon.values)
+        damage = self.power+Dice.roll_dice(6)
+        if self.type != "plyer":
+            damage*=self.weapon.values
         injury.hp-=damage
 
 
