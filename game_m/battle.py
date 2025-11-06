@@ -14,9 +14,12 @@ class Battle:
     def attack(self,first_turn1):
         if first_turn1 =='monster1':
             attack=self.monster.attack(self.player)
-
+            if attack:
+                self.monster.injury(self.player)
         else:
             attack=self.player.attack(self.monster)
+            if attack:
+                self.player.injury(self.monster)
 
 
 
