@@ -14,11 +14,11 @@ class Character:
             return True
         return False
 
-    def injury(self,injury):
+    def injury(self,attacked):
         damage = self.power+Dice.roll_dice(6)
         if self.type != "plyer":
             damage*=self.weapon.values
-        injury.hp-=damage
+        attacked.hp-=damage
 
 
 
