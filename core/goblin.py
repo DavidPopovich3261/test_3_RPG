@@ -1,12 +1,12 @@
 from core.monsters import Monsters
-from core.Rond import Rond
+from random import randint
 
 
 class Goblin(Monsters):
     def __init__(self, name):
         super().__init__(name, 20)
-        self.speed = Rond([5, 10]).rond
-        self.power = Rond([5, 10]).rond
+        self.speed = randint(5, 10)
+        self.power = randint(5, 10)
         self.armor_rating =1
         self.type = 'goblin'
 

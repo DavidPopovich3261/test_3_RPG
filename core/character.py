@@ -1,4 +1,3 @@
-from core.Rond import  Rond
 
 
 class Character:

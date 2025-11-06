@@ -1,13 +1,13 @@
 from core.character import Character
-from core.Rond import Rond
+from random import randint
 
 class Player(Character):
     def __init__(self,name):
         super().__init__(name,50)
-        self.speed=Rond([5,10]).rond
-        self.power=Rond([5,10]).rond
-        self.armor_rating=Rond([5,15]).rond
-        professioni=Rond([0,1]).rond
+        self.speed=randint(5,10)
+        self.power=randint(5,10)
+        self.armor_rating=randint(5,10)
+        professioni=randint(0,1)
         if professioni:
             self.profession='fighter'
             self.power+=2
